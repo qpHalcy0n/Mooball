@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Mooball" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Mooball" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-masm=intel" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Mooball" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-masm=intel" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="/usr/include" />
+		</Compiler>
+		<Linker>
+			<Add library="GL" />
+			<Add library="Xxf86vm" />
+			<Add directory="/usr/lib" />
+		</Linker>
+		<Unit filename="../extensions.cpp" />
+		<Unit filename="../extensions.h" />
+		<Unit filename="../guimgr.cpp" />
+		<Unit filename="../guimgr.h" />
+		<Unit filename="../guiwidget.cpp" />
+		<Unit filename="../guiwidget.h" />
+		<Unit filename="../guiwindow.cpp" />
+		<Unit filename="../guiwindow.h" />
+		<Unit filename="../input.cpp" />
+		<Unit filename="../input.h" />
+		<Unit filename="../main.cpp" />
+		<Unit filename="../quick3ds.cpp" />
+		<Unit filename="../quick3ds.h" />
+		<Unit filename="../quickINI.cpp" />
+		<Unit filename="../quickINI.h" />
+		<Unit filename="../quickcam.cpp" />
+		<Unit filename="../quickcam.h" />
+		<Unit filename="../quickcpu.h" />
+		<Unit filename="../quickdraw.h" />
+		<Unit filename="../quickerror.h" />
+		<Unit filename="../quickgeom.cpp" />
+		<Unit filename="../quickgeom.h" />
+		<Unit filename="../quickhash.h" />
+		<Unit filename="../quickimage.cpp" />
+		<Unit filename="../quickimage.h" />
+		<Unit filename="../quickindex_t.cpp" />
+		<Unit filename="../quickindex_t.h" />
+		<Unit filename="../quicklights.cpp" />
+		<Unit filename="../quicklights.h" />
+		<Unit filename="../quickmath.cpp" />
+		<Unit filename="../quickmath.h" />
+		<Unit filename="../quickrender.cpp" />
+		<Unit filename="../quickrender.h" />
+		<Unit filename="../quickshader.cpp" />
+		<Unit filename="../quickshader.h" />
+		<Unit filename="../windowsvc.cpp" />
+		<Unit filename="../windowsvc.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

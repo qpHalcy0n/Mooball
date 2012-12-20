@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="../extensions.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="125" />
+	</File>
+	<File name="../extensions.h" open="0" top="0" tabpos="3">
+		<Cursor position="1024" topLine="61" />
+	</File>
+	<File name="../main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="16658" topLine="532" />
+	</File>
+	<File name="../quick3ds.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="63855" topLine="2500" />
+	</File>
+	<File name="../quickcam.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="150" />
+	</File>
+	<File name="../quickcam.h" open="0" top="0" tabpos="6">
+		<Cursor position="3393" topLine="105" />
+	</File>
+	<File name="../quickerror.h" open="0" top="0" tabpos="0">
+		<Cursor position="2198" topLine="53" />
+	</File>
+	<File name="../quickimage.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="3329" topLine="126" />
+	</File>
+	<File name="../quickimage.h" open="1" top="0" tabpos="5">
+		<Cursor position="2359" topLine="63" />
+	</File>
+	<File name="../quicklights.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="7684" topLine="392" />
+	</File>
+	<File name="../quicklights.h" open="0" top="0" tabpos="2">
+		<Cursor position="6143" topLine="272" />
+	</File>
+	<File name="../quickmath.h" open="0" top="0" tabpos="0">
+		<Cursor position="684" topLine="16" />
+	</File>
+	<File name="../quickshader.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="6772" topLine="39" />
+	</File>
+	<File name="../quickshader.h" open="0" top="0" tabpos="2">
+		<Cursor position="4910" topLine="162" />
+	</File>
+	<File name="../windowsvc.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="8595" topLine="426" />
+	</File>
+	<File name="../windowsvc.h" open="1" top="0" tabpos="2">
+		<Cursor position="1151" topLine="29" />
+	</File>
+</CodeBlocks_layout_file>
