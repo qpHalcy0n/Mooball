@@ -68,6 +68,13 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>echo D | xcopy /d /s "$(ProjectDir)..\..\Media" "$(ProjectDir)Media"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -93,6 +100,9 @@
       <TargetMachine>MachineX86</TargetMachine>
       <Profile>true</Profile>
     </Link>
+    <PostBuildEvent>
+      <Command>echo D | xcopy /d /s "$(ProjectDir)..\..\Media" "$(ProjectDir)Media"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\extensions.cpp" />
