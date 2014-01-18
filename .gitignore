@@ -5,9 +5,6 @@
 *.pydevproject
 .project
 .metadata
-!bin
-bin/*
-!bin/Media
 tmp/
 *.tmp
 *.bak
@@ -161,3 +158,8 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+!bin/
+bin/*
+!bin/Media/
+
