@@ -5,7 +5,9 @@
 *.pydevproject
 .project
 .metadata
-!bin/Media/*
+!bin
+bin/*
+!bin/Media
 tmp/
 *.tmp
 *.bak
