@@ -100,6 +100,7 @@
     <ClCompile Include="..\guiwidget.cpp" />
     <ClCompile Include="..\guiwindow.cpp" />
     <ClCompile Include="..\input.cpp" />
+    <ClCompile Include="..\lodepng.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\quick3ds.cpp" />
     <ClCompile Include="..\quickcam.cpp" />
@@ -109,8 +110,10 @@
     <ClCompile Include="..\quickINI.cpp" />
     <ClCompile Include="..\quicklights.cpp" />
     <ClCompile Include="..\quickmath.cpp" />
+    <ClCompile Include="..\quickmodel.cpp" />
     <ClCompile Include="..\quickrender.cpp" />
     <ClCompile Include="..\quickshader.cpp" />
+    <ClCompile Include="..\tiny_obj_loader.cc" />
     <ClCompile Include="..\windowsvc.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +122,7 @@
     <ClInclude Include="..\guiwidget.h" />
     <ClInclude Include="..\guiwindow.h" />
     <ClInclude Include="..\input.h" />
+    <ClInclude Include="..\lodepng.h" />
     <ClInclude Include="..\quick3ds.h" />
     <ClInclude Include="..\quickcam.h" />
     <ClInclude Include="..\quickcpu.h" />
@@ -131,8 +135,10 @@
     <ClInclude Include="..\quickINI.h" />
     <ClInclude Include="..\quicklights.h" />
     <ClInclude Include="..\quickmath.h" />
+    <ClInclude Include="..\quickmodel.h" />
     <ClInclude Include="..\quickrender.h" />
     <ClInclude Include="..\quickshader.h" />
+    <ClInclude Include="..\tiny_obj_loader.h" />
     <ClInclude Include="..\windowsvc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -466,6 +466,70 @@ unsigned short CBitmap::GetGLFormat()
 
 
 
+
+CPNG::CPNG()
+{
+	m_imageType = IMG_PNG;
+	m_pPixels = NULL;
+}
+
+
+CPNG::~CPNG()
+{
+	if(m_pPixels)
+	{
+		delete[] m_pPixels;
+		m_pPixels = NULL;
+	}
+}
+
+
+bool CPNG::Load(const char* fName)
+{
+	std::vector<unsigned char> img;
+	unsigned int width, height;
+	unsigned int err = lodepng::decode(img, width, height, fName);
+	if(err != 0)
+		return false;
+
+	m_pPixels = new unsigned char[img.size()];
+	if(!m_pPixels)
+		return false;
+
+	for(int i = 0; i < img.size(); ++i)
+		m_pPixels[i] = img[i];
+
+	m_imageWidth = width;
+	m_imageHeight = height;
+	m_imageBitDepth = (img.size() / (width * height)) * 8;
+
+	switch(m_imageBitDepth)
+	{
+		case 8:
+			m_pixelFormat = PIXEL_FORMAT_I8;
+			break;
+
+		case 16:
+			m_pixelFormat = PIXEL_FORMAT_RGBA8;
+			break;
+
+		case 24:
+			m_pixelFormat = PIXEL_FORMAT_RGB8;
+			break;
+
+		case 32:
+			m_pixelFormat = PIXEL_FORMAT_RGBA8;
+			break;
+
+		default:
+			break;
+	}
+
+	m_depth = 1;
+	m_mipMapCount = 1;
+	return true;
+}
+
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -831,10 +895,19 @@ static CImage *CreateImage(const char *filename)
 	else if(ext.compare("bmp") == 0 || ext.compare("BMP") == 0)
 		result = new CBitmap();
 
+	else if(ext.compare("png") == 0 || ext.compare("PNG") == 0)
+		result = new CPNG();
+
+	else
+	{
+		result = NULL;
+		return result;
+	}
 	if(!result->Load(filename))
 	{
 		printf("Error loading %s\n", filename);
 		delete result;
+		result = NULL;
 	}
 
 	return result;
@@ -1046,6 +1119,8 @@ int	CTextureInterface::AddTexture(const char* fName, unsigned int imgFlags)
 	}
 
 	CImage *img = CreateImage(fName);
+	if(!img)
+		return -1;
 	s_gl_texture tex;
 
 	// Set target type //

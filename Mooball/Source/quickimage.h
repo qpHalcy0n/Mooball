@@ -31,6 +31,7 @@
 #include "windowsvc.h"
 #include "extensions.h"
 #include "quickdraw.h"
+#include "lodepng.h"
 
 
 
@@ -42,6 +43,7 @@
 #define IMG_DDS			0xE2
 #define IMG_BMP			0xE3
 #define IMG_RAW			0xE4
+#define IMG_PNG			0xE5
 
 //image type (broader then what's below)
 #define IMG_STANDARD   0xFE
@@ -656,6 +658,28 @@ class CTarga : public CImage
 
 	private:
 
+};
+
+
+/*
+	CPNG
+	
+	Child of CImage responsible for loading and passing information to 
+	CImage about a .PNG (Portable Network Graphics) image format
+*/
+class CPNG : public CImage
+{
+	public:
+		
+		CPNG();
+		~CPNG();
+
+
+		bool	Load(const char* fName);
+
+//		unsigned short GetGLFormat();
+
+	private:
 };
 
 

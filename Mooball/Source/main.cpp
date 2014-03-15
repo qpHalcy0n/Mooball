@@ -13,6 +13,7 @@
 #include "quickINI.h"
 #include "guimgr.h"
 #include "guiwindow.h"
+#include "quickmodel.h"
 
 
 
@@ -574,9 +575,9 @@ int main(int argc, char** argv)
 	g_bMSAA = (quickINI::Instance()->getValueAsInt("msaa") > 0) && (g_pTexInterface->GetMaxMSAA() > 0);
 	g_bVSYNC = quickINI::Instance()->getValueAsInt("vsync") > 0;
 
-
 //	g_model.Load( "Media/Models/Pokeball.3ds" );
-
+	CModelObject* pMdl = new COBJModel;
+	std::string err = pMdl->LoadModel("sponza.obj", "Media/Models/");
 
 	// Initialize CG Runtime and shaders //
 	init_cg();
